@@ -6,17 +6,15 @@ using UnityEngine.EventSystems;
 using TMPro;
 public class BtnFont : MonoBehaviour
 {
-    public TextMeshProUGUI tekst1;
-    public TextMeshProUGUI tekst2;
+    NapisComponent napisComponent;
     void Start()
     {
-        this.GetComponent<Button>().onClick.AddListener(() => ColorText());
+        napisComponent = this.GetComponentInParent<NapisComponent>();
+        this.GetComponent<Button>().onClick.AddListener(() => ChangeFont());
     }
 
-    void ColorText()
+    void ChangeFont()
     {
-        tekst1.font = EventSystem.current.currentSelectedGameObject.GetComponentInChildren<TMP_Text>().font;
-        tekst2.font = EventSystem.current.currentSelectedGameObject.GetComponentInChildren<TMP_Text>().font;
-
+        napisComponent.ChangeFont();
     }
 }

@@ -7,17 +7,16 @@ using TMPro;
 
 public class BtnTextColor : MonoBehaviour
 {
-    public TextMeshProUGUI tekst1;
-    public TextMeshProUGUI tekst2;
+    NapisComponent napisComponent;
     void Start()
     {
+        napisComponent = this.GetComponentInParent<NapisComponent>();
         this.GetComponent<Button>().onClick.AddListener(() => ColorText());
     }
 
     void ColorText()
     {
-        tekst1.color = EventSystem.current.currentSelectedGameObject.GetComponent<Image>().color;
-        tekst2.color = EventSystem.current.currentSelectedGameObject.GetComponent<Image>().color;
+        napisComponent.ChangeTextColor();
 
     }
 }
