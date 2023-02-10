@@ -5,8 +5,8 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 public class BtnColor : MonoBehaviour
 {
+    public Material mat;
     AppManager appManager;
-
 
     void Start()
     {
@@ -16,7 +16,7 @@ public class BtnColor : MonoBehaviour
 
     void GetMaterial()
     {
-        Material mat = EventSystem.current.currentSelectedGameObject.GetComponent<Image>().material;
+        //Material mat = EventSystem.current.currentSelectedGameObject.GetComponent<Image>().material;
         GameObject activeObject = appManager.GetActiveGameObject();
 
         if (mat != null && activeObject != null)
