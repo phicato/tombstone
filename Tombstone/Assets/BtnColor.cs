@@ -17,7 +17,14 @@ public class BtnColor : MonoBehaviour
     void GetMaterial()
     {
         Material mat = EventSystem.current.currentSelectedGameObject.GetComponent<Image>().material;
-        appManager.GetActiveGameObject().gameObject.GetComponent<Renderer>().material = mat;
+        GameObject activeObject = appManager.GetActiveGameObject();
+
+        if (mat != null && activeObject != null)
+        {
+            activeObject.GetComponent<Renderer>().material = mat;
+
+        }
+        
     }
 
 }

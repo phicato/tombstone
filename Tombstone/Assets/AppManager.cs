@@ -4,12 +4,28 @@ using UnityEngine;
 
 public class AppManager : MonoBehaviour
 {
+    public GameObject[] graves;
     Camera cam;
     GameObject activeObject;
 
     void Start()
     {
         cam = Camera.main;
+        DisplayGrave(0);
+    }
+
+    public void DisplayGrave(int graveIndex)
+    {
+        foreach (GameObject grave in graves)
+        {
+            grave.SetActive(false);
+        }
+        graves[graveIndex].SetActive(true);
+    }
+
+    public GameObject[] GetAllGraves()
+    {
+        return graves;
     }
 
     public GameObject GetActiveGameObject()
@@ -26,8 +42,10 @@ public class AppManager : MonoBehaviour
             if (Physics.Raycast(ray, out hit))
             {
                 activeObject = hit.collider.gameObject;
-                Debug.Log(activeObject.name);
             }
         }
     }
+
+
+
 }
