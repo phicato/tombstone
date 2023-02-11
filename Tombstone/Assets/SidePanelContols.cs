@@ -15,6 +15,7 @@ public class SidePanelContols : MonoBehaviour
         btnNapisy.GetComponent<Button>().onClick.AddListener(() => OpenPanel(0));
         btnDodatki.GetComponent<Button>().onClick.AddListener(() => OpenPanel(1));
         CloseAllPanels();
+        OpenPanel(0);
     }
 
 

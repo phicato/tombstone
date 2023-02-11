@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="sprite.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.74564394"
+     inkscape:cx="405.68961"
+     inkscape:cy="717.50064"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Warstwa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="rect294"
+       style="fill:#fafafa;stroke:none;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:round;fill-opacity:1"
+       d="M 41.516329 87.94502 L 41.516329 114.25814 L 13.838949 114.25814 L 13.838949 124.90297 L 41.516329 124.90297 L 41.516329 189.83854 L 53.225692 189.83854 L 53.225692 124.90297 L 80.903072 124.90297 L 80.903072 114.25814 L 53.225692 114.25814 L 53.225692 87.94502 L 41.516329 87.94502 z "
+       inkscape:export-filename="krzyz 1.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1015"
+       width="50.741936"
+       height="67.774193"
+       x="133.06451"
+       y="109.64516"
+       inkscape:export-filename="transparent.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       id="path1069"
+       style="fill:#fafafa;fill-opacity:1;stroke:none;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:round"
+       d="m 136.6131,87.94502 2.00727,22.21664 -2.00727,4.09648 -3.29769,2.76 -24.37969,-2.76 -3.93572,4.94605 3.93572,5.69878 24.12879,-2.63454 3.54859,2.63454 1.88182,3.56236 -1.88182,61.37321 5.85468,5.89636 5.85469,-5.89636 -2.25818,-61.19685 2.25818,-3.73872 4.23011,-2.63454 23.44727,2.63454 4.64181,-5.84672 -4.64181,-4.79811 -23.69818,2.25818 -3.9792,-2.25818 -1.88182,-4.61298 1.88182,-21.70014 -5.80624,-4.892723 z"
+       inkscape:export-filename="krzyz 2.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       sodipodi:nodetypes="ccccccccccccccccccccccccc" />
+    <ellipse
+       style="fill:#fafafa;fill-opacity:1;stroke:#c4c4c4;stroke-width:0.9;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-dasharray:none"
+       id="path1221"
+       cx="37.708027"
+       cy="259.00928"
+       rx="25.189592"
+       ry="30.610878"
+       inkscape:export-filename="foto1.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+  </g>
+</svg>
