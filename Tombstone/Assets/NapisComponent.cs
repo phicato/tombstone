@@ -20,6 +20,7 @@ public class NapisComponent : MonoBehaviour
         btn.onClick.AddListener(() => TogglePanelWlasciwosci());
         btnDelete.onClick.AddListener(() => DeleteNapisComponent());
         ChangeText();
+        TogglePanelWlasciwosci();
     }
 
     void DeleteNapisComponent()
@@ -32,12 +33,12 @@ public class NapisComponent : MonoBehaviour
     {
         if (panelWlasciwosci.activeInHierarchy)
         {
-            this.gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(GetComponent<RectTransform>().sizeDelta.x, 80);
+            this.gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(GetComponent<RectTransform>().sizeDelta.x, 70);
 
         }
         else
         {
-            this.gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(GetComponent<RectTransform>().sizeDelta.x, 400);
+            this.gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(GetComponent<RectTransform>().sizeDelta.x, 460);
         }
         panelWlasciwosci.SetActive(!panelWlasciwosci.activeInHierarchy);
     }

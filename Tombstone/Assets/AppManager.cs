@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AppManager : MonoBehaviour
 {
+    public Transform pomniki;
+
     public GameObject[] graves;
     Camera cam;
     GameObject activeObject;
