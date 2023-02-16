@@ -1,33 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AppManager : MonoBehaviour
 {
-    public Transform pomniki;
-
-    public GameObject[] graves;
+    [SerializeField] Transform pomniki;
+    [SerializeField] GameObject[] pomniki3D;
+    [SerializeField] Material[] koloryKamieni;
+    [SerializeField] Button btnExit;
+    public MeshRenderer mr;
     Camera cam;
     GameObject activeObject;
+
+    public void ZakonczApke()
+    {
+        Application.Quit();
+    }
 
     void Start()
     {
         cam = Camera.main;
         DisplayGrave(0);
+        Debug.Log(mr.bounds.size);
     }
 
     public void DisplayGrave(int graveIndex)
     {
-        foreach (GameObject grave in graves)
+        foreach (GameObject grave in pomniki3D)
         {
             grave.SetActive(false);
         }
-        graves[graveIndex].SetActive(true);
+        pomniki3D[graveIndex].SetActive(true);
     }
 
     public GameObject[] GetAllGraves()
     {
-        return graves;
+        return pomniki3D;
     }
 
     public GameObject GetActiveGameObject()
