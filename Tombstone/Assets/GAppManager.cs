@@ -18,26 +18,14 @@ public class GAppManager : MonoBehaviour
             Instance = this;
         }
     }
-    [SerializeField] Transform topMenu;
-    [SerializeField] Transform topGrave;
-    ItemPick[] tops;
 
 
     private void Start()
     {
-        tops = topMenu.GetComponentsInChildren<ItemPick>();
+
     }
 
-    public void SetTop(int index)
-    {
-        if(topGrave.transform.childCount >= 1)
-        {
-            Destroy(topGrave.transform.GetChild(0).gameObject);
-        }
-        GameObject top = Instantiate(tops[index].gameObject, topGrave);
-        top.AddComponent<GTop>();
-        Destroy(top.GetComponent<ItemPick>());
-        top.transform.localPosition = Vector3.zero;
-        top.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
-    }
+
 }
+
+
