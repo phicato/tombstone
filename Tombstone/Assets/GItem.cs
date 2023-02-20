@@ -16,9 +16,15 @@ public class GItem : MonoBehaviour
 
     private void OnMouseDown()
     {
-
         grave.activeElement = gameObject;
-        offset = cam.ScreenToWorldPoint(Input.mousePosition) - grave.transform.position;
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+            offset = cam.ScreenToWorldPoint(Input.mousePosition) - transform.localPosition;
+        }
+        else
+        {
+            offset = cam.ScreenToWorldPoint(Input.mousePosition) - grave.transform.position;
+        }
 
     }
 
@@ -26,7 +32,7 @@ public class GItem : MonoBehaviour
     {
         if (Input.GetMouseButton(1))
         {
-            float speed = 1500f;
+            float speed = 800f;
             grave.transform.rotation *= Quaternion.Euler(0f, Input.GetAxis("Mouse X") * -speed * Time.deltaTime, 0f);
             grave.transform.GetChild(0).transform.rotation *= Quaternion.Euler(Input.GetAxis("Mouse Y") * speed * Time.deltaTime, 0f,  0f);
         }
@@ -36,7 +42,16 @@ public class GItem : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        grave.transform.localPosition = cam.ScreenToWorldPoint(Input.mousePosition) - (Vector3)offset;
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+            
+            transform.localPosition = new Vector3( cam.ScreenToWorldPoint(Input.mousePosition).x - offset.x, 0f, cam.ScreenToWorldPoint(Input.mousePosition).y - offset.y);
+        }
+        else
+        {
+            grave.transform.localPosition = cam.ScreenToWorldPoint(Input.mousePosition) - (Vector3)offset;
+
+        }
     }
 
 }

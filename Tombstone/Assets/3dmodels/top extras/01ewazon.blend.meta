@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ccb40192b9b7d1a4b84b92d91dd8439f
+guid: 586aa51c916609b4babe6aa49985015b
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -8,17 +8,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: mat1
-    second: {fileID: 2100000, guid: 7ce07a9b633e5df4dacc596d973124f5, type: 2}
+    second: {fileID: 2100000, guid: 51ebec17c54d05a4fbeb29e04fa4b0d7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: mat1.001
-    second: {fileID: 2100000, guid: 7ce07a9b633e5df4dacc596d973124f5, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: mat2
-    second: {fileID: 2100000, guid: bb83aee0ce3dd8a41836739cc03ea8f9, type: 2}
+      name: roze2
+    second: {fileID: 2100000, guid: 5d5861dfdbca0cb459e4b7f2a9cf1c36, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

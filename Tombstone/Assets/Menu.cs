@@ -27,6 +27,7 @@ public class Menu : MonoBehaviour
         PrepareGraveElementsMenu(walls3DObjects, wallsMenu, -110f, 0.9f);
         PrepareGraveElementsMenu(tops3DObjects, topsMenu, -40f, 1.9f);
         PrepareGraveElementsMenu(curbs3DObjects, curbsMenu, -40f, 1.9f);
+        PrepareGraveElementsMenu(topExtras3DObjects, topExtrasMenu, -100f, 0.94f);
         PrepareMaterialMenu();
         CloseAllPanels();
     }
@@ -36,6 +37,7 @@ public class Menu : MonoBehaviour
     [SerializeField] GameObject[] walls3DObjects;    
     [SerializeField] GameObject[] tops3DObjects;
     [SerializeField] GameObject[] curbs3DObjects;
+    [SerializeField] GameObject[] topExtras3DObjects;
 
     [SerializeField] GameObject materialItem;
     [SerializeField] GameObject[] panels;
@@ -43,6 +45,7 @@ public class Menu : MonoBehaviour
     [SerializeField] Transform wallsMenu;
     [SerializeField] Transform topsMenu;
     [SerializeField] Transform curbsMenu;
+    [SerializeField] Transform topExtrasMenu;
 
     public GameObject[] GetWall3dList()
     {
@@ -68,12 +71,16 @@ public class Menu : MonoBehaviour
         {
             items = curbs3DObjects;
         }
+        else if (cat == "e")
+        {
+            items = topExtras3DObjects;
+        }
 
-        foreach(GameObject item in items)
+        foreach (GameObject item in items)
         {
             item.SetActive(false);
-            items[index].SetActive(true);
         }
+        items[index].SetActive(true);
     }
 
     //creates material menu
@@ -108,6 +115,10 @@ public class Menu : MonoBehaviour
         {
             GameObject menuItem = Instantiate(gElements[i], itemStartPos, Quaternion.Euler(startRotation), gMenu);
             menuItem.SetActive(true);
+            if (menuItem.name[2..3] == "e")
+            {
+                menuItem.transform.localScale = Vector3.one * 3;
+            }
             menuItem.AddComponent<BoxCollider>();
             menuItem.AddComponent<MenuItem>();
 

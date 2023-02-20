@@ -25,6 +25,11 @@ public class GAppManager : MonoBehaviour
 
     }
 
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
 
 }
 
