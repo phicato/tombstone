@@ -119,7 +119,7 @@ public class Menu : MonoBehaviour
             {
                 menuItem.transform.localScale = Vector3.one * 3;
             }
-            menuItem.AddComponent<BoxCollider>();
+            //menuItem.AddComponent<BoxCollider>();
             menuItem.AddComponent<MenuItem>();
 
             Destroy(menuItem.GetComponent<GItem>());
@@ -128,7 +128,9 @@ public class Menu : MonoBehaviour
             for (int j = 0; j < innerItems.Length; j++)
             {
                 innerItems[j].material = materials[j];
+                innerItems[j].gameObject.AddComponent<MenuItemMesh>();
                 Destroy(innerItems[j].GetComponent<GItem>());
+
             }
 
             if (i == itemsInTheRow - 1)
