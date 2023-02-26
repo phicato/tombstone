@@ -11,7 +11,7 @@ public class MenuInscription : MonoBehaviour
     bool isGraveInscrHolderActive = false;
     void Start()
     {
-        graveInscriptionHolder.SetActive(isGraveInscrHolderActive);
+        graveInscriptionHolder.SetActive(false);
         //foreach(Text txt in graveTexts)
         //{
         //    txt.text = "";
@@ -46,9 +46,17 @@ public class MenuInscription : MonoBehaviour
     {
         if (graveInscriptionHolder.activeInHierarchy)
         {
-            if (Input.GetKey(KeyCode.LeftControl))
+            if (Input.GetKey(KeyCode.X))
             {
                 graveInscriptionHolder.transform.localPosition += Vector3.right * (Input.mouseScrollDelta.y * 0.02f);
+            }
+            else if (Input.GetKey(KeyCode.Z))
+            {
+                graveInscriptionHolder.transform.localPosition += Vector3.forward * (Input.mouseScrollDelta.y * 0.04f);
+            }
+            else if (Input.GetKey(KeyCode.LeftControl))
+            {
+                graveInscriptionHolder.transform.localScale += Vector3.one * (Input.mouseScrollDelta.y * 0.04f);
             }
             else
             {
@@ -58,19 +66,13 @@ public class MenuInscription : MonoBehaviour
         }
     }
 
-    public void MoveInscriptionHolderZScale()
-    {
-        if (graveInscriptionHolder.activeInHierarchy)
-        {
-            if (Input.GetKey(KeyCode.LeftControl))
-            {
-                graveInscriptionHolder.transform.localScale += Vector3.one * (Input.mouseScrollDelta.y * 0.04f);
-            }
-            else
-            {
-                graveInscriptionHolder.transform.localPosition += Vector3.forward * (Input.mouseScrollDelta.y * 0.04f);
-            }
 
+    public void ChangeColor(Color col)
+    {
+        Text[] graveTexts = graveInscriptionHolder.GetComponentsInChildren<Text>();
+        foreach(Text text in graveTexts)
+        {
+            text.color = col;
         }
     }
 

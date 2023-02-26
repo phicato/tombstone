@@ -38,6 +38,8 @@ public class Menu : MonoBehaviour
     [SerializeField] GameObject[] tops3DObjects;
     [SerializeField] GameObject[] curbs3DObjects;
     [SerializeField] GameObject[] topExtras3DObjects;
+    [SerializeField] GameObject stoneColorPanel;
+    [SerializeField] GameObject decorationsColorPanel;
 
     [SerializeField] GameObject materialItem;
     [SerializeField] GameObject[] panels;
@@ -46,6 +48,7 @@ public class Menu : MonoBehaviour
     [SerializeField] Transform topsMenu;
     [SerializeField] Transform curbsMenu;
     [SerializeField] Transform topExtrasMenu;
+    [SerializeField] Transform wallDecorationsMenu;
 
     public GameObject[] GetWall3dList()
     {
@@ -156,12 +159,22 @@ public class Menu : MonoBehaviour
         {
             panels[index].SetActive(false);
             activePanel = null;
+            stoneColorPanel.SetActive(false);
+            decorationsColorPanel.SetActive(false);
         }
         else
         {
             CloseAllPanels();
             panels[index].SetActive(true);
             activePanel = panels[index].transform;
+            if (index < 5)
+            {
+                stoneColorPanel.SetActive(true);
+            }
+            else
+            {
+                decorationsColorPanel.SetActive(true);
+            }
         }
     }
 
@@ -171,6 +184,8 @@ public class Menu : MonoBehaviour
         {
             panel.SetActive(false);
         }
+        stoneColorPanel.SetActive(false);
+        decorationsColorPanel.SetActive(false);
     }
 
 }
