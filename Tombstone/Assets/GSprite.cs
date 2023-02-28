@@ -19,7 +19,15 @@ public class GSprite : MonoBehaviour
 
     private void OnMouseOver()
     {
-        transform.localScale += Vector3.one * Input.mouseScrollDelta.y * 0.1f;
+        if (Input.GetKey(KeyCode.Z))
+        {
+            transform.localPosition += 0.1f * Input.mouseScrollDelta.y * Vector3.forward;
+        }
+        else
+        {
+
+            transform.localScale += Vector3.one * Input.mouseScrollDelta.y * 0.1f;
+        }
     }
 
     private void OnMouseDrag()

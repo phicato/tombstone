@@ -25,6 +25,11 @@ public class GAppManager : MonoBehaviour
 
     }
 
+    public void OpenWebsite()
+    {
+        Application.OpenURL("https://www.nagrobki-katywroclawskie-tombstone.pl/");
+    }
+
     public void ExitGame()
     {
         Application.Quit();

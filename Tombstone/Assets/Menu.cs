@@ -24,10 +24,10 @@ public class Menu : MonoBehaviour
 
     void Start()
     {
-        PrepareGraveElementsMenu(walls3DObjects, wallsMenu, -110f, 0.9f);
-        PrepareGraveElementsMenu(tops3DObjects, topsMenu, -40f, 1.9f);
-        PrepareGraveElementsMenu(curbs3DObjects, curbsMenu, -40f, 1.9f);
-        PrepareGraveElementsMenu(topExtras3DObjects, topExtrasMenu, -100f, 0.94f);
+        PrepareGraveElementsMenu(walls3DObjects, wallsMenu, -100f, 0.9f, 1.1f);
+        PrepareGraveElementsMenu(tops3DObjects, topsMenu, -35f, 1.72f, 1.3f);
+        PrepareGraveElementsMenu(curbs3DObjects, curbsMenu, -30f, 1.9f, 0.9f);
+        PrepareGraveElementsMenu(topExtras3DObjects, topExtrasMenu, -100f, 0.94f, 0.8f);
         PrepareMaterialMenu();
         CloseAllPanels();
     }
@@ -107,11 +107,11 @@ public class Menu : MonoBehaviour
     }
 
     //creates menu with 3d objects
-    void PrepareGraveElementsMenu(GameObject[] gElements, Transform gMenu, float startRot, float startPosY)
+    void PrepareGraveElementsMenu(GameObject[] gElements, Transform gMenu, float startRot, float startPosY, float spacerY)
     {
         float itemSpacer = 1.2f;
         Vector2 itemStartPos = new(-4f, startPosY);
-        int itemsInTheRow = 4;
+        int itemsInTheRow = 5;
         Vector3 startRotation = new(startRot, 0, 0);
 
         for (int i = 0; i < gElements.Length; i++)
@@ -136,9 +136,9 @@ public class Menu : MonoBehaviour
 
             }
 
-            if (i == itemsInTheRow - 1)
+            if (i == itemsInTheRow - 1 || i == itemsInTheRow*2 - 1)
             {
-                itemStartPos += new Vector2(-itemSpacer * (itemsInTheRow - 1), -1f);
+                itemStartPos += new Vector2(-itemSpacer * (itemsInTheRow - 1), -spacerY);
             }
             else
             {
